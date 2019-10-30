@@ -1,0 +1,19 @@
+<a class="waves-effect waves-light btn-small" href=" template2.php?option=Alterar&id=<?=$row[0];?>&name=<?=$row[1];?>"
+    title="Editar">
+    <i class="fa fa-edit"></i>
+</a>
+
+<a class="btn modal-trigger waves-effect waves-light btn-small" title="Editar" href="#modal1<?=$row[0];?>">
+    <i class="fa fa-trash"></i>
+</a>
+
+<div id="{{$opt}} " class="modal">
+    <div class="modal-content">
+        <h4 class="center">Deseja deletar os usuario <?=$row[1];?></h4>
+        <p>Esta operação não podera ser desfeita.</p>
+    </div>
+    <div class="modal-footer">
+        <a href="../Model/delete.php?id=<?=$row[0];?>" class="modal-close waves-effect waves-green btn-flat">Sim</a>
+        <a class="modal-close waves-effect waves-red btn-flat">Nâo</a>
+    </div>
+</div>
